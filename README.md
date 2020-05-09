@@ -1,4 +1,6 @@
-# Metalsmith project template
+# Camion BEM
+
+Ceci est un projet en construction.
 
 ## Quick start
 

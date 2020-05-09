@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<atom:link href="https://zupple.fr/rss.xml" rel="self" type="application/rss+xml" />
-		<title>{{ title }}</title>
-		<link>https://zupple.fr/</link>
-		<description>{{ socialDescription }}</description>
+		<atom:link href="{{ projectUrl }}rss.xml" rel="self" type="application/rss+xml" />
+		<title>{{ projectName }}</title>
+		<link>{{ projectUrl }}</link>
+		<description>{{ projectDescription }}</description>
 
 		{% for item in $indexes.feed.all %}
 			<item>
-				<guid isPermaLink="false">https://zupple.fr/{{ item.$type }}/{{ item.dateString }}</guid>
 				<title>
 					{{ item.title }}
 				</title>
-                <pubDate>{{ item.date.toUTCString() }}</pubDate>
 				<link>{{ item.url }}</link>
 				<description>{{ item.socialDescription }}</description>
 			</item>

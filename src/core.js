@@ -1,20 +1,24 @@
 const path = require('path');
 const looper = require('metalsmith-looper');
 
-const projectUrl = 'https://example.com/';
-const projectName = 'My Example';
-const projectDescription = 'It will be so nice one day';
+const projectUrl = 'https://camionbem.fr/';
+const projectName = 'Camion BEM';
+const projectDescription = 'BEM, un méthodologie CSS pour tous les projets';
 
 function toPath(file) {
   return looper.removeExtension(path.basename(file.$name));
 }
 
-module.exports = looper(function({ loopOnType, loopContent }) {
+module.exports = looper(function({ createIndex, loopOnType, loopContent }) {
+  createIndex('feed');
 
-  loopOnType('page', function(file) {
+  loopOnType('page', function(file, { addIndex }) {
     file.fullSlug = file.slugName || `${toPath(file)}/`;
     if (file.layout === 'home.njk') {
       file.fullSlug = '';
+    }
+    if (path.extname(file.fullSlug) === '') {
+      addIndex('feed', 'all');
     }
   });
 

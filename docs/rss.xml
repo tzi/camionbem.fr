@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<atom:link href="https://zupple.fr/rss.xml" rel="self" type="application/rss+xml" />
-		<title></title>
-		<link>https://zupple.fr/</link>
-		<description></description>
+		<atom:link href="https://camionbem.fr/rss.xml" rel="self" type="application/rss+xml" />
+		<title>Camion BEM</title>
+		<link>https://camionbem.fr/</link>
+		<description>BEM, un méthodologie CSS pour tous les projets</description>
 
+		
+			<item>
+				<title>
+					BEM, une méthodologie CSS pour tous les projets
+				</title>
+				<link>https://camionbem.fr/</link>
+				<description>Project&#39;s description</description>
+			</item>
 		
 	</channel>
 </rss> 

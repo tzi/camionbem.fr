@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {%- block title %}{{ title }} | {{ projectName }}{% endblock -%}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ socialDescription | safe }}" />
+
+    <meta property="og:type" content="{{ "website" if fullSlug === '' else "article" }}" />
+    <meta property="og:title" content="{{ title | safe }}" />
+    <meta property="og:description" content="{{ socialDescription | safe }}" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="{{ url }}" />
+    <meta property="og:image" content="{{ projectUrl }}{{ socialImage }}" />
+    {% if socialImageWidth %}
+        <meta property="og:image:width" content="{{ socialImageWidth }}" />
+    {% endif %}
+    {% if socialImageHeight %}
+        <meta property="og:image:width" content="{{ socialImageHeight }}" />
+    {% endif %}
+    <meta property="og:site_name" content="{{ projectName }}" />
+    <meta property="fb:pages" content="1597946216895219" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ZuppleGames" />
+    <meta name="twitter:title" content="{{ title | safe }}" />
+    <meta name="twitter:description" content="{{ socialDescription | safe }}" />
+    {% if socialImage %}
+        <meta name="twitter:image" content="{{ projectUrl }}{{ socialImage }}" />
+    {% endif %}
+
+    <link rel="canonical" href="{{ url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ projectDescription }}" href="/rss.xml" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+{% block content %}
+{%  endblock %}
+</body>
+</html>
+

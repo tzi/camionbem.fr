@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5;
+}
+
+/* OBJECTS */
+
+.o-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.o-section {
+  padding: 20px 0;
+}
+
+.o-section__item {
+  padding: 20px 0;
+}

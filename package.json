@@ -25,7 +25,7 @@
     "prettier": "^1.14.2",
     "pretty-quick": "^1.9.0",
     "remark": "^8.0.0",
-    "remark-html": "^6.0.1",
+    "remark-html": "^13.0.2",
     "remark-textr": "^3.0.1",
     "unist-util-select": "^1.5.0"
   },
